@@ -1,3 +1,3 @@
 # SIMON
-Juego hecho para trbajo pácico facultativo. 
+Juego hecho para trabajo pácico facultativo. 
 https://lucas-82.github.io/DAW__Simon/
