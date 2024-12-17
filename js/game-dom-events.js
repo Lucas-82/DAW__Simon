@@ -40,6 +40,7 @@ var rankingLevelButton = document.getElementById('ranking-level-title');
 var rankingPointsButton = document.getElementById('ranking-points-title');
 var rankingDateButton = document.getElementById('ranking-date-title');
 
+
 nameInput.addEventListener('input', function () {
     nameInput.style.width = this.value.length + 'ch';
   });
