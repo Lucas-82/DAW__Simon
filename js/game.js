@@ -62,10 +62,7 @@ window.onload = function () {
     if (!gameStarted && !showingLevelSecuence) {
       gameStarted = true;
       setStartButton('EN CURSO');
-      // audio not played and showing error inside setTimeout -> FIX
-      // setTimeout(function() {
       createLevel();
-      // }, 1000);
     }
   }
 
@@ -103,9 +100,7 @@ function createLevel() {
     clearSequenceEntered();
     showLevelSequence(0);
   }
-  function playAudio(color) {
-    document.getElementById(color + '-sound').play();
-  }
+
   function showLevelSequence(colorIndex) {
     showingLevelSecuence = true;
     setGameState(PlayingStatus.sequenceShowing);
@@ -160,7 +155,7 @@ function createLevel() {
         buttonYellow.style.background = '#ffff00';
         break;
     }
-    playAudio(button);
+
     setTimeout(function () {
       buttonDefault(button);
     }, 250);
@@ -339,11 +334,10 @@ function createLevel() {
   function to2Places(value) {
     return String(value).padStart(2, '0');
   }
-
+  
   function calculatePenalization() {
     return Math.trunc((hours * 60 * 60 + minutes * 60 + seconds) / 15);
   }
-  
   function visualFormattedDatetime(datetime) {
     var parsedDate = new Date(datetime);
     if (isNaN(parsedDate)) {
